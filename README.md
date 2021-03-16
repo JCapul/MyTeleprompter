@@ -2,7 +2,7 @@
 
 A simple Flask app for local teleprompting inspired by https://github.com/BroadcastVision/Open-Teleprompter.
 
-## Quick start
+## Quick start
 
 Setup your repository and launch the app locally:
 ```
