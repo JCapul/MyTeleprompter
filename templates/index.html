@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Teleprompter</title>
+
+<meta name="description" content="My Teleprompter is a simple web based teleprompter for local use.">
+<meta name="keywords" content="free, open, tablet, mobile, web prompter, online prompter, free prompter, prompter, teleprompt">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+
+</head>
+
+<body>
+
+<div class="container" id="content">
+	
+	<h1>My Teleprompter</h1>
+
+	<br>
+
+	<form action="" method="post" role="form" target="_blank">
+		{{ form.csrf }}
+		<div class="form-group">
+			<textarea class="form-control" name="text" style="height: 300px">Paste here your text to teleprompt</textarea>
+		</div>
+		<button type="submit" class="btn btn-success">Start</button>
+	</form>
+	
+	<hr>
+
+	<h1>Control Keys</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Function</th>
+				<th>Keyboard Shortcut</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Increase font size</td>
+				<td><kbd>+</kbd></td>
+			</tr>
+			<tr>
+				<td>Decrease font size</td>
+				<td><kbd>-</kbd></td>
+			</tr>
+			<tr>
+				<td>Text Scroll</td>
+				<td><kbd>UP</kbd> or <kbd>DOWN</kbd> Works only when the prompter in on <strong>Stop mode</strong>.</td>
+			</tr>
+			<tr>
+				<td>Decrease Scroll Speed</td>
+				<td><kbd>LEFT</kbd></td>
+			</tr>
+			<tr>
+				<td>Increase Scroll Speed</td>
+				<td><kbd>RIGHT</kbd></td>
+			</tr>
+			<tr>
+				<td>Play/Pause</td>
+				<td><kbd>Spacebar</kbd></td>
+			</tr>
+			<tr>
+				<td>Full Screen</td>
+				<td><kbd>F11</kbd></td>
+			</tr>
+			<tr>
+				<td>Reset</td>
+				<td><kbd>CTRL</kbd></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<!--  Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>
